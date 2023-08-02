@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('artists_id')->constrained();
+            $table->foreignId('artist_id')->constrained();
             $table->foreignId('live_id')->constrained();
             $table->foreignId('user_id')->constrained();
             $table->text('body', 2000);
