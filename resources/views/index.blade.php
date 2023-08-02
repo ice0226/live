@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        　（index）
+        　index
     </x-slot>
         <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
         <h1>Live Name</h1>

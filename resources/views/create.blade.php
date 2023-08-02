@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        　（create）
+        create
     </x-slot>
         <h1>Live Name</h1>
         <form action="/posts" method="POST">

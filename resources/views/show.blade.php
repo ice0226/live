@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        　（show）
+        　show
     </x-slot>
         <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
         <h1 class="title">
