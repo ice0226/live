@@ -15,10 +15,11 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('events_id')->constrained();
-            $table->foreignId('lives_id')->constrained();
-            $table->foreignId('users_id')->constrained();
-            $table->text('dody',2000);
+            $table->foreignId('event_id')->constrained();
+            $table->foreignId('live_id')->constrained();
+            $table->foreignId('user_id')->constrained();
+            $table->string('title',50);
+            $table->text('body',2000);
             $table->timestamps();
         });
     }
