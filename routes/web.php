@@ -3,7 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
-use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ArtistController;
+use App\Http\Controllers\LiveController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +31,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/', [PostController::class, 'index'])->name('index');
-    Route::get('/categories/{category}', [CategoryController::class,'index']);
+    Route::get('/artists/{artist}', [artistController::class,'index']);
+    Route::get('/lives/{live}', [LiveController::class,'index']);
 });
 
 require __DIR__.'/auth.php';

@@ -18,11 +18,10 @@ return new class extends Migration
             $table->foreignId('artist_id')->constrained();
             $table->foreignId('live_id')->constrained();
             $table->foreignId('user_id')->constrained();
-            $table->text('body', 2000);
             $table->timestamps();
-            $table->text('start_date');
-            $table->text('end_date');
-            $table->text('color');
+            $table->string('start_date');
+            $table->string('end_date');
+            $table->string('color');
         });
     }
 

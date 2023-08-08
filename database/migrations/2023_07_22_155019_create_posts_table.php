@@ -15,11 +15,12 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('event_id')->constrained();
+            $table->foreignId('event_id')->constrained()->nullable();
+            $table->foreignId('artist_id')->constrained();
             $table->foreignId('live_id')->constrained();
             $table->foreignId('user_id')->constrained();
             $table->string('title',50);
-            $table->text('body',2000);
+            $table->string('body',2000);
             $table->timestamps();
         });
     }
