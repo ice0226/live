@@ -20,6 +20,7 @@ class PostSeeder extends Seeder
                 'title' => '7/22 北海道',
                 'body' => '命名はデータを基準に考える',
                 'event_id'=>1,
+                'artist_id'=>1,
                 'live_id'=>1,
                 'user_id'=>1,
                 'created_at' => new DateTime(),

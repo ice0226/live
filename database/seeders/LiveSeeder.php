@@ -17,10 +17,18 @@ class liveSeeder extends Seeder
     public function run()
     {
          DB::table('lives')->insert([
-                'name'=>'A',
+                'name'=>'3rd Single発売イベントDay4',
                 'artist_id'=>1,
                 'date'=>'7/22',
-                'place' => '北海道',
+                'place' => 'イオンモール札幌苗穂1階ウエストコート(北海道)',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+         DB::table('lives')->insert([
+                'name'=>'3rd Single発売イベントDay５',
+                'artist_id'=>1,
+                'date'=>'7/30',
+                'place' => 'セブンパークアリオ柏 屋外 スマイル・パーク(千葉)',
                 'created_at' => new DateTime(),
                 'updated_at' => new DateTime(),
          ]);

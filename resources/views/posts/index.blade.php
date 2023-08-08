@@ -2,18 +2,16 @@
     <x-slot name="header">
         　index
     </x-slot>
-        <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
         <h1>Live Name</h1>
         <div class='posts'>
             @foreach ($posts as $post)
+            <a href="/artist/{{ $post->artist->id }}">{{ $post->artist->name }}</a>
+            <a href="/Lives/{{ $post->live->id }}">{{ $post->live->name }}</a>
                 <div class='post'>
                     <h2 class='title'><a href="/posts/{{ $post->id }}">{{ $post->title }}</a></h2>
                     <p class='body'>{{ $post->body }}</p>
                 </div>
             @endforeach
-        </div>
-        <div class='paginate'>
-            {{ $posts->links() }}
         </div>
         <a href='/posts/create'>create</a>
 </x-app-layout>
