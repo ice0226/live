@@ -27,8 +27,8 @@ class PostController extends Controller
     //     }
     public function create(Artist $artist,Live $live)
         {
-            return view('posts.create')->with(['artists' => $artist->get()]);
-            return view('posts.create')->with(['lives' => $live->get()]);
+            return view('posts.create')->with(['artists' => $artist->get() , 'lives' => $live->get()]);
+            
         }
     // public function create(Live $live)
     //     {
