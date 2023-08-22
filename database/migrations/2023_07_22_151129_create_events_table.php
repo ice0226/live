@@ -15,8 +15,10 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('artist_id')->constrained();
-            $table->foreignId('live_id')->constrained();
+            $table->foreignId('artist_id')->nullable()->constrained();
+            $table->foreignId('live_id')->nullable()->constrained();
+            $table->string('event_title')->comment('イベント名');
+            $table->string('event_body')->nullable()->comment('イベント内容');
             $table->foreignId('user_id')->constrained();
             $table->text('body', 2000);
             $table->timestamps();
