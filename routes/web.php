@@ -47,5 +47,6 @@ Route::controller(PostController::class)->middleware(['auth'])->group(function()
     Route::put('/posts/{post}', 'update')->name('update');
     Route::delete('/posts/{post}', 'delete')->name('delete');
     Route::get('/posts/{post}/edit', 'edit')->name('edit');
+    Route::post('/calendar/create', [EventController::class, 'create'])->name("create"); // 予定の新規追加
 });
 

@@ -16,8 +16,8 @@ class EventSeeder extends Seeder
     {
          DB::table('posts')->insert([
                 'user_id'=>1,
-                'live_id'=>1,
-                'artist_id'=>1,
+                // 'live_id'=>1,
+                // 'artist_id'=>1,
                 'start_date'=> '命名はデータを基準に考える',
                 'end_date'=> '命名はデータを基準に考える',
                 'color'=>red,
