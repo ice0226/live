@@ -1,4 +1,3 @@
-import '@fullcalendar/core/vdom';
 import axios from "axios";
 import { Calendar } from "@fullcalendar/core";
 import dayGridPlugin from "@fullcalendar/daygrid";
