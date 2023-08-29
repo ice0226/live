@@ -3,8 +3,13 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+<<<<<<< HEAD
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\EventController; 
+=======
 use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\LiveController;
+>>>>>>> master
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +38,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/', [PostController::class, 'index'])->name('index');
     Route::get('/artists/{artist}', [artistController::class,'index']);
     Route::get('/lives/{live}', [LiveController::class,'index']);
+    Route::get('/categories/{category}', [CategoryController::class,'index']);
+    Route::get('/calendar', [EventController::class, 'show'])->name("show");
 });
 
 require __DIR__.'/auth.php';
@@ -47,5 +54,6 @@ Route::controller(PostController::class)->middleware(['auth'])->group(function()
     Route::put('/posts/{post}', 'update')->name('update');
     Route::delete('/posts/{post}', 'delete')->name('delete');
     Route::get('/posts/{post}/edit', 'edit')->name('edit');
+    Route::post('/calendar/create', [EventController::class, 'create'])->name("create"); // 予定の新規追加
 });
 

@@ -8,28 +8,31 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
-    public function getByLimit(int $limit_count = 10)
+    public function getPaginateByLimit(int $limit_count = 10)
     {
         
-        return $this::with('artist')->orderBy('updated_at', 'DESC')->paginate($limit_count);
-        return $this::with('live')->orderBy('updated_at', 'DESC')->paginate($limit_count);
-        
+        return $this::orderBy('updated_at', 'DESC')->paginate($limit_count);
     }
     protected $fillable = [
         'title',
         'body',
-        'artist_id',
-        'live_id',
-        'event_id',
-        'user_id'
+        
     ];
-    
-    public function artist()
+    public function event()
     {
-        return $this->belongsTo(Artist::class);
+        return $this->belongsTo(Event::class);
     }
     public function live()
     {
         return $this->belongsTo(Live::class);
     }
+    public function artist()
+    {
+        return $this->belongsTo(Artist::class);
+    }
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
 }
