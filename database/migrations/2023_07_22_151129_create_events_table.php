@@ -20,11 +20,10 @@ return new class extends Migration
             $table->string('event_title')->comment('イベント名');
             $table->string('event_body')->nullable()->comment('イベント内容');
             $table->foreignId('user_id')->constrained();
-            $table->text('body', 2000);
             $table->timestamps();
-            $table->text('start_date');
-            $table->text('end_date');
-            $table->text('color');
+            $table->string('start_date');
+            $table->string('end_date');
+            $table->string('color');
         });
     }
 

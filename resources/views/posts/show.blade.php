@@ -2,7 +2,8 @@
     <x-slot name="header">
         　show
     </x-slot>
-        <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
+        <a href="">{{ $post->artist->name }}</a>
+        <a href="">{{ $post->live->name }}</a>
         <h1 class="title">
             {{ $post->title }}
         </h1>

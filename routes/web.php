@@ -3,8 +3,13 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+<<<<<<< HEAD
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\EventController; 
+=======
+use App\Http\Controllers\ArtistController;
+use App\Http\Controllers\LiveController;
+>>>>>>> master
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +36,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/', [PostController::class, 'index'])->name('index');
+    Route::get('/artists/{artist}', [artistController::class,'index']);
+    Route::get('/lives/{live}', [LiveController::class,'index']);
     Route::get('/categories/{category}', [CategoryController::class,'index']);
     Route::get('/calendar', [EventController::class, 'show'])->name("show");
 });

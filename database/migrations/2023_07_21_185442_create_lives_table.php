@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('lives', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('date')->nullable(true)->change();
-            $table->string('place')->nullable(true)->change();
+            $table->string('date')->nullable();
+            $table->string('place')->nullable();
             $table->foreignId('artist_id')->constrained();
             $table->timestamps();
         });
