@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\LiveController;
+use App\Http\Controllers\EventController;
 
 /*
 |--------------------------------------------------------------------------
