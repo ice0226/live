@@ -3,13 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
-<<<<<<< HEAD
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\EventController; 
-=======
 use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\LiveController;
->>>>>>> master
 
 /*
 |--------------------------------------------------------------------------
